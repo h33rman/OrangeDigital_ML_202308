@@ -53,8 +53,6 @@ if st.sidebar.button('Predict'):
     
     # Predict the outcome using the model
     prediction = model_RF.predict(user_input_processed)
-
-    st.write(prediction)
     
     # Display the prediction result
     if prediction == 1:
