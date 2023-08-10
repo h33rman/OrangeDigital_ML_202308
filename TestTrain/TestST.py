@@ -16,9 +16,8 @@ def main():
     occupation = st.selectbox("What is your occupation?", ["Engineer", "Data Scientist", "Teacher", "Other"])
 
     # Showing the selected values
-    st.write(f"Your age is: {age}")
-    st.write(f"Your name is: {name}")
-    st.write(f"Your occupation is: {occupation}")
+    st.button("Next")
+    st.bar_chart()
 
 if __name__ == "__main__":
     main()

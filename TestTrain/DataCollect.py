@@ -1,28 +1,9 @@
 import streamlit as st
-import base64
-import re
 
 
 def main():
 
-    # Load the SVG file
-    with open("data/images/undraw_medicine_b1ol.svg", 'r') as f:
-        svg = f.read()
-
-    # Remove width and height attributes from the SVG
-    svg = re.sub(r'(<svg[^>]*?) (width="[^"]*"|height="[^"]*")', r'\1', svg, flags=re.DOTALL)
-
-    # Wrap the SVG in a container and style it to be responsive
-    svg_container = f"""
-    <div style="width:50%; height:auto; margin-left:auto; margin-right:auto;">
-        {svg}
-    </div>
-    """
-    
-    # Display the SVG in Streamlit
-    st.markdown(svg_container, unsafe_allow_html=True)
-
-    # st.image("data/images/undraw_medicine_b1ol.png", caption='Your Image Caption', use_column_width=True)
+    st.image("data/images/blue_health.jpg", caption='@image/credit', use_column_width=True)
     st.title("Welcome to Our Stroke Prediction App")
     st.write("Understanding your risk factors for stroke can help you take proactive steps towards health.")
 
@@ -73,7 +54,5 @@ def main():
     if st.button("Get My Assessment"):
         # Placeholder result
         st.write("Your stroke risk assessment will appear here!")
-
-
 
 main()

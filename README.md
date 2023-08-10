@@ -1,30 +1,37 @@
+# Stroke Prediction Web App
 
-# Machine Learning with Python Course
-# Orange Digital Center Madagascar
-## 07 - 11 Aug 2023
-# 
-Welcome to my repository for the Machine Learning with Python course, organized by the Orange Digital Center in Madagascar. This course offers a comprehensive introduction to the fascinating world of Machine Learning (ML) with a focus on real-world application and practical skills.
+The primary purpose of this project is to provide an accessible and user-friendly tool for assessing stroke risk based on individual health parameters. Stroke is a leading cause of death and disability worldwide. Early identification of risk factors and timely intervention can drastically reduce the devastating impacts of this condition. This web application bridges the gap between individuals and preliminary stroke risk assessment, emphasizing the importance of health awareness and proactive measures.
 
-## Course Overview
+![Stroke Prediction App Screenshot](data/images/blue_health.jpg)
 
-This 5-day course covers:
+## Features
 
-1. **Introduction to Machine Learning**: Understanding the basics of ML, exploring different ML approaches, and mastering popular Python libraries for ML.
-2. **Data Preparation**: Mastering the art of data collection and cleaning, and data manipulation using Python libraries such as pandas and numpy.
-3. **Machine Learning Models**: Diving deep into classification and regression algorithms, training models, and evaluating their performance.
-4. **Neural Networks and Deep Learning**: Unraveling the mysteries of neural networks, and implementing neural networks using TensorFlow/Keras.
-5. **Practical Projects**: Implementing real ML projects, and learning best practices for stunning results.
+- **User-Centric Design**: An intuitive and interactive interface allowing users to easily input health metrics.
+- **Real-Time Predictions**: Immediate feedback on stroke risk based on a trained machine learning model.
+- **Holistic Data Capture**: Captures a wide range of health data, including age, marital status, smoking habits, and more, ensuring a comprehensive risk assessment.
 
-## Objectives
+## Installation & Usage
 
-The primary goal of this course is to equip participants with the necessary skills to create their own AI applications and understand how AI is applied in real-world scenarios.
+1. **Clone the repository**:
 
-## About the Trainer
 
-The course is led by an experienced professional in the field, dedicated to guiding participants throughout their learning journey.
+2. **Set up a virtual environment** (optional but recommended):
 
-## Repository Structure
 
-This repository contains all the notebooks, code snippets, datasets, and relevant reference material from the course.
+3. **Install required packages**:
 
+
+4. **Run the Streamlit app**:
+
+
+
+5. Open the app in your browser at `http://localhost:8501`.
+
+## Model
+
+The backbone of this application is the K-Nearest Neighbors (KNN) classifier. It's trained on a dataset comprising various health parameters and their associated stroke outcomes. Data preprocessing includes one-hot encoding for categorical variables and normalization using standard scaling.
+
+## Contributing
+
+Your insights are valuable! Feel free to fork the repository and propose changes through a pull request. For bug reports or suggestions, please open an issue.
 
