@@ -22,6 +22,7 @@ The primary purpose of this project is to provide an accessible and user-friendl
 
 
 4. **Run the Streamlit app**:
+type : streamlit run app.py
 
 
 

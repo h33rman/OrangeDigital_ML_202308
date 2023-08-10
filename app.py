@@ -43,11 +43,12 @@ def get_user_input():
     return pd.DataFrame([user_data])
 
 st.title('Stroke Prediction App')
+st.image("data/images/loading.gif", width=200)
 st.write('Enter the details in the sidebar to predict if you are at risk of having a stroke.')
 
 user_input = get_user_input()
 
-if st.sidebar.button('Predict'):
+if st.sidebar.button('Predict Situation'):
     # Preprocess the user input data
     user_input_processed = preprocessor.transform(user_input)
     
@@ -56,9 +57,10 @@ if st.sidebar.button('Predict'):
     
     # Display the prediction result
     if prediction == 1:
-        st.error('Based on the data provided, there is a risk of a stroke. Please consult a healthcare professional.')
+        st.error('There is a risk of a stroke. Please consult a healthcare professional.')
+        st.image("data/images/health_care.png",width=300)
     else:
-        st.success('Based on the data provided, there seems to be a low risk of a stroke. However, always consult with a healthcare professional for a complete assessment.')
-
+        st.success('There seems to be a low risk of a stroke. However, always consult with a healthcare professional.')
+        st.image("data/images/insurance.png", width=300)
 st.write('---')
 st.write('Disclaimer: This tool is for predictive purposes only and should not replace professional medical advice.')
