@@ -2,7 +2,7 @@
 
 The primary purpose of this project is to provide an accessible and user-friendly tool for assessing stroke risk based on individual health parameters. Stroke is a leading cause of death and disability worldwide. Early identification of risk factors and timely intervention can drastically reduce the devastating impacts of this condition. This web application bridges the gap between individuals and preliminary stroke risk assessment, emphasizing the importance of health awareness and proactive measures.
 
-![Stroke Prediction App Screenshot](data/images/blue_health.jpg)
+![Stroke Prediction App Screenshot](data/images/loading.jpg)
 
 ## Features
 
