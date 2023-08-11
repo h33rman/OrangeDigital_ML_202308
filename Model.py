@@ -10,7 +10,7 @@ import joblib
 warnings.filterwarnings("ignore")
 
 # Load the dataset
-data = pd.read_csv("data/healthcare-dataset-stroke-data.csv")
+data = pd.read_csv("data/2healthcare_stroke_dataset.csv")
 df = data.drop(columns=['id']).dropna(axis=0)
 
 # Define features and target
@@ -32,7 +32,7 @@ X_train_processed = preprocessor.fit_transform(X_train)
 X_test_processed = preprocessor.transform(X_test)
 
 # Train a Random Forest model
-clf = RandomForestClassifier(n_estimators=100, random_state=1)
+clf = RandomForestClassifier(n_estimators=50,max_depth=None, min_samples_leaf=1, min_samples_split=2 , random_state=1)
 clf.fit(X_train_processed, y_train)
 
 # Evaluate the model (optional)
