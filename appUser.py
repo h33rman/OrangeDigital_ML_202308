@@ -1,10 +1,13 @@
 import streamlit as st
 import pandas as pd
-import joblib
+import pickle
 
 # Load your trained model and preprocessor
-model_RF = joblib.load('random_forest_model.pkl')
-preprocessor = joblib.load('preprocessor.pkl')
+with open('random_forest_model.pkl', 'rb') as model_file:
+    model_RF = pickle.load(model_file)
+
+with open('preprocessor.pkl', 'rb') as preprocessor_file:
+    preprocessor = pickle.load(preprocessor_file)
 
 
 def calculate_bmi(height, weight):

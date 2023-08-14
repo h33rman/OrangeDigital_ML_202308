@@ -4,7 +4,7 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-import joblib
+import pickle  # Using pickle instead of joblib
 
 # Suppress warnings
 warnings.filterwarnings("ignore")
@@ -32,13 +32,16 @@ X_train_processed = preprocessor.fit_transform(X_train)
 X_test_processed = preprocessor.transform(X_test)
 
 # Train a Random Forest model
-clf = RandomForestClassifier(n_estimators=50,max_depth=None, min_samples_leaf=1, min_samples_split=2 , random_state=1)
+clf = RandomForestClassifier(n_estimators=50, max_depth=None, min_samples_leaf=1, min_samples_split=2, random_state=1)
 clf.fit(X_train_processed, y_train)
 
 # Evaluate the model (optional)
 accuracy = clf.score(X_test_processed, y_test)
 print(f"Model Accuracy: {accuracy:.2f}")
 
-# Save the trained model and preprocessor for future use
-joblib.dump(clf, 'random_forest_model.pkl')
-joblib.dump(preprocessor, 'preprocessor.pkl')
+# Save the trained model and preprocessor for future use using pickle
+with open('random_forest_model.pkl', 'wb') as model_file:
+    pickle.dump(clf, model_file)
+
+with open('preprocessor.pkl', 'wb') as preprocessor_file:
+    pickle.dump(preprocessor, preprocessor_file)
